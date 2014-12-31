@@ -65,32 +65,32 @@ unix command line how to move files
 
 The following list includes commonly used commands. We will (1) introduce you to the command, (2) explain the purpose of the command and (3) provide the basic syntax.
 
-+ls
-+mv
-+cp
-+mkdir
-+cd
-+pwd
-+rm
-+.
-+..
-+~
-+cat
++ ls
++ mv
++ cp
++ mkdir
++ cd
++ pwd
++ rm
++ .
++ ..
++ ~
++ cat
 
-+diff
-+date
-+cal
-+say
-+up key
++ diff
++ date
++ cal
++ say
++ up key
 
-+|
-+telnet
-+curl
-+grep
-+echo
-+la | grep .txt
-+tar
-+head
-+tail
-+brew
-+nano
++ |
++ telnet
++ curl
++ grep
++ echo
++ la | grep .txt
++ tar
++ head
++ tail
++ brew
++ nano
