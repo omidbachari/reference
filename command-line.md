@@ -52,14 +52,21 @@ Google is another great place to enter a query and find the command you need, or
 Search for:
 
 ```
-command line how to move files
+command line how to move a file
 ```
 
-You can prepend your search with the shell interpreter or your operating system convention:
+You can prepend your search with the name of your shell interpreter or operating system convention:
 
 ```
-unix command line how to move files
+unix command line how to move a file
 ```
+
+The same thinking can be used to learn about a command you already know:
+
+```
+unix command line mv command
+```
+
 
 ## Commonly Used Commands
 
