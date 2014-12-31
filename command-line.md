@@ -12,11 +12,15 @@ Most Unix-like operating systems (MacOS being one of them) provide that you can 
 
 ## Man
 
-We will start this guide by providing you with a tool to help you learn your *own* way around the command prompt.
+We will start this guide by providing you with a tool to help you learn your *own* way around the command prompt. At Launch Academy, we frown (constructively) upon questions asked of an instructor before resources are consulted.
 
-As in so many contexts, the documentation of a technology helps to answer most questions. The challenge is learning how to navigate those documents, when they have tough technical terms and symbols. The ```man``` (short for manual)  is a source of documentation for many of the commands we will define here. You can use ```man``` if it's faster for you. It will not always have the easiest information to understand, so work with it and see.
+As in so many contexts, the documentation of a technology helps to answer most questions. The challenge is learning how to navigate those documents, when they have tough technical terms and symbols. The ```man``` (short for manual)  is a source of documentation for many of the commands we will define here. You can use ```man``` by doing the following:
 
-Run ```man``` on ```man``` itself. Enter the following in your command prompt.
+```
+man <name of command>
+```
+
+It will not always have the easiest information to understand, so work with it and see. Run ```man``` on ```man``` itself. Enter the following in your command prompt.
 
 ```
 man man
@@ -41,25 +45,47 @@ man formats and displays the on-line manual pages.  If you specify section, man 
 
 As you can see, using the ```man``` command can provide you with instant access to valuable information. The most important information for our purposes can be found in ```SYNOPSIS``` and ```DESCRIPTION```, where we can find syntax and explanation, respectively.
 
+## Google
+
+Google is another great place to enter a query and find the command you need, or else to take a command and see what it does, or how to use it. This is another important part of independently trying to find answers.
+
+Search for:
+
+```
+command line how to move files
+```
+
+You can prepend your search with the shell interpreter or your operating system convention:
+
+```
+unix command line how to move files
+```
+
 ## Commonly Used Commands
 
-cat
-|
+The following list includes commonly used commands. We will (1) introduce you to the command, (2) explain the purpose of the command and (3) provide the basic syntax.
+
 ls
 mv
 cp
-rm
-diff
 mkdir
 cd
-cd ..
-cd ~/
 pwd
-telnet
-curl
+rm
+.
+..
+~
+cat
+
+diff
 date
 cal
-cat
+say
+up key
+
+|
+telnet
+curl
 grep
 echo
 la | grep .txt
@@ -68,12 +94,3 @@ head
 tail
 brew
 nano
-say 'Hello'
-http://cli.learncodethehardway.org/book/
-
-ctrl + a	Moves the cursor to the beginning of your command
-ctrl + e	Moves the cursor to the end of your command
-ctrl + u	Deletes the portion of your command before the current cursor position
-
-
-## Advanced Topics for Continued Learning
