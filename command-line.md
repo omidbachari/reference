@@ -76,14 +76,14 @@ unix command line mv command
 
 ## Commonly Used Commands
 
-The following list includes commonly used commands that a user types into the command prompt. We will (1) introduce you to the command, (2) provide the basic syntax, and (3) describe the purpose.
+The following list includes commonly used commands that a user types into the command prompt. We will (1) introduce you to the command, (2) provide the basic syntax in an example, and (3) describe the purpose.
 
 ### Basics
 
 <table>
   <tr>
     <th>Command</th>
-    <th>Syntax</th>
+    <th>Syntax Example</th>
     <th>Description</th>
   </tr>  
   <tr>
@@ -138,10 +138,9 @@ The following list includes commonly used commands that a user types into the co
   <tr>
     <td>`.`</td>
     <td>
-      `cd .`<br>
       `mv directory/filename .`
     </td>
-    <td></td>
+    <td>Refers to the current working directory.</td>
   </tr>
   <tr>
     <td>`..`</td>
@@ -150,7 +149,7 @@ The following list includes commonly used commands that a user types into the co
       `mv directory/filename ..`<br>
       `ls ..`
     </td>
-    <td></td>
+    <td>Refers to the immediate parent directory</td>
   </tr>
   <tr>
     <td>`~`</td>
@@ -158,22 +157,22 @@ The following list includes commonly used commands that a user types into the co
       `cd ~`<br>
       `mkdir ~/Desktop/new-directory`
     </td>
-    <td></td>
+    <td>Refers to the user's root directory</td>
   </tr>
   <tr>
     <td>`/`</td>
     <td>
       `cd /`
     </td>
-    <td></td>
+    <td>Refers to the system's root directory.</td>
   </tr>
   <tr>
-    <td>`/path`</td>
+    <td>`path/child_path`</td>
     <td>
-      `cd /path`<br>
-      `mv /path .`<br>
+      `cd path/child_path`<br>
+      `mv smells/fragrances/roses .`<br>
     </td>
-    <td><strong>Relative Path</strong></td>
+    <td><strong>Relative Path</strong> When you are targeting a directory somewhere in your current working directory, you can assume the command prompt interpreter knows your current location and refer to the path inside your directory</td>
   </tr>
   <tr>
     <td>`/root/path`</td>
@@ -181,7 +180,7 @@ The following list includes commonly used commands that a user types into the co
       `cd /root/path`<br>
       `mv /root/path .`<br>
     </td>
-    <td><strong>Absolute Path</strong></td>
+    <td><strong>Absolute Path</strong> When you are targeting a directory without reference to your current working directory, start your path with `/`. That will find the root directory, so that you can find a precise path without reference to your current working directory.</td>
   </tr>
   <tr>
     <td>`cat`</td>
@@ -217,13 +216,15 @@ The following list includes commonly used commands that a user types into the co
 
 ### Advanced
 
-+ |
-+ telnet
-+ curl
-+ grep
-+ echo
-+ la | grep .txt
-+ tar
-+ head
-+ tail
-+ nano
+For the following commands, use `man` and Google to determine how they work and how they can support your work on the command line.
+
++ `|`
++ `telnet`
++ `curl`
++ `grep`
++ `echo`
++ `la | grep .txt`
++ `tar`
++ `head`
++ `tail`
++ `nano`
