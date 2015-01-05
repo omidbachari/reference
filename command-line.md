@@ -185,27 +185,27 @@ The following list includes commonly used commands that a user types into the co
   <tr>
     <td>`cat`</td>
     <td>`cat filename`</td>
-    <td></td>
+    <td>The `cat` command will display the text in a file.</td>
   </tr>
   <tr>
     <td>`diff`</td>
     <td>`diff file_one file_two`</td>
-    <td></td>
+    <td>The `diff` command will display the difference between two files.</td>
   </tr>
   <tr>
     <td>`date`</td>
     <td>`date`</td>
-    <td></td>
+    <td>Prints the current date and time.</td>
   </tr>
   <tr>
     <td>`cal`</td>
     <td>`cal`</td>
-    <td></td>
+    <td>Prints a calendar.</td>
   </tr>
   <tr>
     <td>`say`</td>
-    <td>`say`</td>
-    <td></td>
+    <td>`say hello.txt`</td>
+    <td>Uses text-to-speech to read a .txt file.</td>
   </tr>
   <tr>
     <td>`↑` key</td>
