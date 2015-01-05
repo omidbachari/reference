@@ -8,7 +8,13 @@ This guide will provide a quick intro to the command line. It is also a referenc
 
 The command prompt allows the user to manage files and folders, perform queries and launch applications. In graphical operating systems, like Windows or Mac, you interact with the machine mainly with the mouse. With a command prompt, you type commands and hit return.
 
-Most Unix-like operating systems (MacOS being one of them) provide that you can choose a command-line interpreter. In this reference guide, we are going to provide you with frequently used commands that we use in [ohmyzsh](http://ohmyz.sh/), which is the shell of choice at Launch Academy.
+Most Unix-like operating systems (MacOS being one of them) provide that you can choose a command-line interpreter.
+
+## Quick Note: Users and Paths
+
+In this guide, we talk about users and paths. A user is you. To the command prompt, a user is an entity that logs in, is using the command prompt and is permitted to perform certain actions.
+
+A path is an address within a filesystem. **Absolute** paths point to a definite place in a filesystem, regardless of the present working directory. **Relative** is a shorter path, based on the present working directory.
 
 ## Man
 
@@ -70,25 +76,146 @@ unix command line mv command
 
 ## Commonly Used Commands
 
-The following list includes commonly used commands. We will (1) introduce you to the command, (2) explain the purpose of the command and (3) provide the basic syntax.
+The following list includes commonly used commands that a user types into the command prompt. We will (1) introduce you to the command, (2) provide the basic syntax, and (3) describe the purpose.
 
-+ ls
-+ mv
-+ cp
-+ mkdir
-+ cd
-+ pwd
-+ rm
-+ .
-+ ..
-+ ~
-+ cat
+### Basics
 
-+ diff
-+ date
-+ cal
-+ say
-+ up key
+<table>
+  <tr>
+    <th>Command</th>
+    <th>Syntax</th>
+    <th>Description</th>
+  </tr>  
+  <tr>
+    <td>`ls`</td>
+    <td>`ls`</td>
+    <td>List directory contents.</td>
+  </tr>  
+  <tr>
+    <td>`mv`</td>
+    <td>
+      `mv source target`
+      `mv original_filename desired_filename`
+    </td>
+    <td>Moves one or more files or directories from one place to another. Since it can "move" files from one filename to another, it is also used to rename files.</td>
+  </tr>
+  <tr>
+    <td>`cp`</td>
+    <td>
+      `cp source_file target_file`<br>
+      `cp source_file target_directory`
+      `cp source_file_1 source_file_2 target_directory`
+      `cp source_directory target_directory`
+    </td>
+    <td>
+      <ul>
+        <li>When the program has two arguments of path names to files, the program copies the contents of the first file to the second file, creating the second file if necessary.</li>  
+        <li>When the program has one or more arguments of path names of files and following those an argument of a path to a directory, then the program copies each source file to the destination directory, creating any files not already existing.</li>  
+        <li>When the program's arguments are the path names to two directories, cp copies all files in the source directory to the destination directory, creating any files or directories needed. This mode of operation requires an additional option flag, typically r, to indicate the recursive copying of directories. If the destination directory already exists, the source is copied into the destination, while a new directory is created if the destination does not exist.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>`mkdir`</td>
+    <td>`mkdir new_directory`</td>
+    <td>Creates a new directory in the current directory.</td>
+  </tr>
+  <tr>
+    <td>`cd`</td>
+    <td>`cd directory_name`</td>
+    <td>Changes the user's current directory location.</td>
+  </tr>
+  <tr>
+    <td>`pwd`</td>
+    <td>`pwd`</td>
+    <td>Displays the absolute pathname of the current working directory.</td>
+  </tr>
+  <tr>
+    <td>`rm`</td>
+    <td>`rm filename`</td>
+    <td>Removes file. Recommend to use `rm -i` because it asks the user to confirm.</td>
+  </tr>
+  <tr>
+    <td>`.`</td>
+    <td>
+      `cd .`<br>
+      `mv directory/filename .`
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`..`</td>
+    <td>
+      `cd ..`<br>
+      `mv directory/filename ..`<br>
+      `ls ..`
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`~`</td>
+    <td>
+      `cd ~`<br>
+      `mkdir ~/Desktop/new-directory`
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`/`</td>
+    <td>
+      `cd /`
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`/path`</td>
+    <td>
+      `cd /path`<br>
+      `mv /path .`<br>
+    </td>
+    <td><strong>Relative Path</strong></td>
+  </tr>
+  <tr>
+    <td>`/root/path`</td>
+    <td>
+      `cd /root/path`<br>
+      `mv /root/path .`<br>
+    </td>
+    <td><strong>Absolute Path</strong></td>
+  </tr>
+  <tr>
+    <td>`cat`</td>
+    <td>`cat filename`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`diff`</td>
+    <td>`diff file_one file_two`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`date`</td>
+    <td>`date`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`cal`</td>
+    <td>`cal`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`say`</td>
+    <td>`say`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`↑` key</td>
+    <td></td>
+    <td>Finds the last command entered. If initial characters are typed and then `↑` is pressed, the last command starting with the initial characters will be found.</td>
+  </tr>
+</table>
+
+### Advanced
 
 + |
 + telnet
@@ -99,5 +226,4 @@ The following list includes commonly used commands. We will (1) introduce you to
 + tar
 + head
 + tail
-+ brew
 + nano
