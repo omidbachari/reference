@@ -214,6 +214,16 @@ The following list includes commonly used commands that a user types into the co
   </tr>
 </table>
 
+### Handy Tricks
+
+**Completion with `tab`** When you start to type a directory name, you can hit the `tab` key to let your command prompt to finish the name. Try using the `tab` button in other contexts, as it can complete other names, too.
+
+**Change directory in ohmyzsh** You do not always have to use `cd` when you are trying to change directories in the command prompt. Rather than going to `cd directory_name`, try typing `directory_name` directly and hitting return. This will perform the same action.
+
+**iTerm session tabs** You can have mutiple command prompt sessions open, tabbed conveniently like browser tabs. Just use CMD + T to open a new tab. To have the new tab reuse your current working directory, follow these steps in iTerm:
+
+`Preferences > Profiles > Working Directory > Reuse previous session's directory`
+
 ### Advanced
 
 For the following commands, use `man` and Google to determine how they work and how they can support your work on the command line.
