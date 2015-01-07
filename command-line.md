@@ -6,7 +6,7 @@ This guide will provide a quick intro to the command line. It is also a referenc
 
 ## Background
 
-The command prompt allows the user to manage files and folders, perform queries and launch applications. In graphical operating systems, like Windows or Mac, you interact with the machine mainly with the mouse. With a command prompt, you type commands and hit return.
+The command prompt allows the user to manage files and directories, perform queries and launch applications. In graphical operating systems, like Windows or Mac, you interact with the machine mainly with the mouse. With a command prompt, you type commands and hit return.
 
 Most Unix-like operating systems (MacOS being one of them) provide that you can choose a command-line interpreter.
 
