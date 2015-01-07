@@ -14,7 +14,7 @@ Most Unix-like operating systems (MacOS being one of them) provide that you can 
 
 In this guide, we talk about users and paths. A user is you. To the command prompt, a user is an entity that logs in, is using the command prompt and is permitted to perform certain actions.
 
-A path is an address within a filesystem. **Absolute** paths point to a definite place in a filesystem, regardless of the present working directory. **Relative** is a shorter path, based on the present working directory.
+A path is an address within a filesystem. **Absolute** paths point to a definite place in a filesystem, regardless of the present working directory. **Relative** paths are shorter, based on the present working directory.
 
 ## Man
 
