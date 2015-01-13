@@ -14,12 +14,14 @@ It makes somewhat more sense from blogger Adam Hawkins:
 
 Before we dive into the technical details, it would help to illuminate how the HTTP process and rack application work at a basic level. That will inform how we build our first rack app. Let's break down the basic process:
 
-1. We send an HTTP request.
+1. The client sends HTTP **request**
 2. The server parses the HTTP request and passes it into our rack app.
-3. Our rack app returns a response to the server.
-4. The server sends a response back to the browser.
+3. Our rack app logic determines the HTTP **response**.
+4. The server sends that HTTP response back to the client.
 
-At heart, the road map illustrates the purpose of rack. With our browser and server running, the browser sends a request by pointing to a URL. The server then provides us some magic to clean up the request and turn it into something we can use. That's where rack finds it's place. Rack is the first stop for that parsed and ready HTTP request. Rack could then take the parsed request and hand it to Rails or Sinatra. For this assignment, our rack app will provide all of the behavior, in and of itself. So, we will handle the parsed request. Since a rack app is just Ruby code, that means we have an opportunity to use this easy to learn and expressive language to determine the response we'll send to the server. The server then sends (usually) a string of HTML back to the browser for rendering.
+At heart, the road map illustrates the purpose of rack. With our browser and server running, the browser sends a request by pointing to a URL. The server then provides us some magic to clean up the request and turn it into something we can use in our rack app. Rack is the first stop for that parsed HTTP request. Rack could then take the parsed request and hand it to Rails or Sinatra. For this assignment, our rack app will provide all of the logic and behavior, in and of itself.  
+
+Since a rack app is just Ruby code, that means we have an opportunity to use this easy to learn and expressive language to determine our server's behavior.
 
 ## Building a Rack Application
 
