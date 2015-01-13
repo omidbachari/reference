@@ -87,25 +87,25 @@ The following list includes commonly used commands that a user types into the co
     <th>Description</th>
   </tr>  
   <tr>
-    <td>`ls`</td>
-    <td>`ls`</td>
+    <td>```ls```</td>
+    <td>```ls```</td>
     <td>List directory contents.</td>
   </tr>  
   <tr>
-    <td>`mv`</td>
+    <td>```mv```</td>
     <td>
-      `mv source target`
-      `mv original_filename desired_filename`
+      ```mv source target```
+      ```mv original_filename desired_filename```
     </td>
     <td>Moves one or more files or directories from one place to another. Since it can "move" files from one filename to another, it is also used to rename files.</td>
   </tr>
   <tr>
-    <td>`cp`</td>
+    <td>```cp```</td>
     <td>
-      `cp source_file target_file`<br>
-      `cp source_file target_directory`
-      `cp source_file_1 source_file_2 target_directory`
-      `cp source_directory target_directory`
+      ```cp source_file target_file```<br>
+      ```cp source_file target_directory```
+      ```cp source_file_1 source_file_2 target_directory```
+      ```cp source_directory target_directory```
     </td>
     <td>
       <ul>
@@ -116,125 +116,125 @@ The following list includes commonly used commands that a user types into the co
     </td>
   </tr>
   <tr>
-    <td>`mkdir`</td>
-    <td>`mkdir new_directory`</td>
+    <td>```mkdir```</td>
+    <td>```mkdir new_directory```</td>
     <td>Creates a new directory in the current directory.</td>
   </tr>
   <tr>
-    <td>`cd`</td>
-    <td>`cd directory_name`</td>
+    <td>```cd```</td>
+    <td>```cd directory_name```</td>
     <td>Changes the user's current directory location.</td>
   </tr>
   <tr>
-    <td>`pwd`</td>
-    <td>`pwd`</td>
+    <td>```pwd```</td>
+    <td>```pwd```</td>
     <td>Displays the absolute pathname of the current working directory.</td>
   </tr>
   <tr>
-    <td>`rm`</td>
-    <td>`rm filename`</td>
-    <td>Removes file. Recommend to use `rm -i` because it asks the user to confirm.</td>
+    <td>```rm```</td>
+    <td>```rm filename```</td>
+    <td>Removes file. Recommend to use ```rm -i``` because it asks the user to confirm.</td>
   </tr>
   <tr>
-    <td>`.`</td>
+    <td>```.```</td>
     <td>
-      `mv directory/filename .`
+      ```mv directory/filename .```
     </td>
     <td>Refers to the current working directory.</td>
   </tr>
   <tr>
-    <td>`..`</td>
+    <td>```..```</td>
     <td>
-      `cd ..`<br>
-      `mv directory/filename ..`<br>
-      `ls ..`
+      ```cd ..```<br>
+      ```mv directory/filename ..```<br>
+      ```ls ..```
     </td>
     <td>Refers to the immediate parent directory</td>
   </tr>
   <tr>
-    <td>`~`</td>
+    <td>```~```</td>
     <td>
-      `cd ~`<br>
-      `mkdir ~/Desktop/new-directory`
+      ```cd ~```<br>
+      ```mkdir ~/Desktop/new-directory```
     </td>
     <td>Refers to the user's root directory</td>
   </tr>
   <tr>
-    <td>`/`</td>
+    <td>```/```</td>
     <td>
-      `cd /`
+      ```cd /```
     </td>
     <td>Refers to the system's root directory.</td>
   </tr>
   <tr>
-    <td>`path/child_path`</td>
+    <td>```path/child_path```</td>
     <td>
-      `cd path/child_path`<br>
-      `mv smells/fragrances/roses .`<br>
+      ```cd path/child_path```<br>
+      ```mv smells/fragrances/roses .```<br>
     </td>
     <td><strong>Relative Path</strong> When you are targeting a directory somewhere in your current working directory, you can assume the command prompt interpreter knows your current location and refer to the path inside your directory</td>
   </tr>
   <tr>
-    <td>`/root/path`</td>
+    <td>```/root/path```</td>
     <td>
-      `cd /root/path`<br>
-      `mv /root/path .`<br>
+      ```cd /root/path```<br>
+      ```mv /root/path .```<br>
     </td>
-    <td><strong>Absolute Path</strong> When you are targeting a directory without reference to your current working directory, start your path with `/`. That will find the root directory, so that you can find a precise path without reference to your current working directory.</td>
+    <td><strong>Absolute Path</strong> When you are targeting a directory without reference to your current working directory, start your path with ```/```. That will find the root directory, so that you can find a precise path without reference to your current working directory.</td>
   </tr>
   <tr>
-    <td>`cat`</td>
-    <td>`cat filename`</td>
-    <td>The `cat` command will display the text in a file.</td>
+    <td>```cat```</td>
+    <td>```cat filename```</td>
+    <td>The ```cat``` command will display the text in a file.</td>
   </tr>
   <tr>
-    <td>`diff`</td>
-    <td>`diff file_one file_two`</td>
-    <td>The `diff` command will display the difference between two files.</td>
+    <td>```diff```</td>
+    <td>```diff file_one file_two```</td>
+    <td>The ```diff``` command will display the difference between two files.</td>
   </tr>
   <tr>
-    <td>`date`</td>
-    <td>`date`</td>
+    <td>```date```</td>
+    <td>```date```</td>
     <td>Prints the current date and time.</td>
   </tr>
   <tr>
-    <td>`cal`</td>
-    <td>`cal`</td>
+    <td>```cal```</td>
+    <td>```cal```</td>
     <td>Prints a calendar.</td>
   </tr>
   <tr>
-    <td>`say`</td>
-    <td>`say hello.txt`</td>
+    <td>```say```</td>
+    <td>```say hello.txt```</td>
     <td>Uses text-to-speech to read a .txt file.</td>
   </tr>
   <tr>
-    <td>`↑` key</td>
+    <td>```↑``` key</td>
     <td></td>
-    <td>Finds the last command entered. If initial characters are typed and then `↑` is pressed, the last command starting with the initial characters will be found.</td>
+    <td>Finds the last command entered. If initial characters are typed and then ```↑``` is pressed, the last command starting with the initial characters will be found.</td>
   </tr>
 </table>
 
 ### Handy Tricks
 
-**Completion with `tab`** When you start to type a directory name, you can hit the `tab` key to let your command prompt to finish the name. Try using the `tab` button in other contexts, as it can complete other names, too.
+**Completion with ```tab```** When you start to type a directory name, you can hit the ```tab``` key to let your command prompt to finish the name. Try using the ```tab``` button in other contexts, as it can complete other names, too.
 
-**Change directory in ohmyzsh** You do not always have to use `cd` when you are trying to change directories in the command prompt. Rather than going to `cd directory_name`, try typing `directory_name` directly and hitting return. This will perform the same action.
+**Change directory in ohmyzsh** You do not always have to use ```cd``` when you are trying to change directories in the command prompt. Rather than going to ```cd directory_name```, try typing ```directory_name``` directly and hitting return. This will perform the same action.
 
 **iTerm session tabs** You can have mutiple command prompt sessions open, tabbed conveniently like browser tabs. Just use CMD + T to open a new tab. To have the new tab reuse your current working directory, follow these steps in iTerm:
 
-`Preferences > Profiles > Working Directory > Reuse previous session's directory`
+```Preferences > Profiles > Working Directory > Reuse previous session's directory```
 
 ### Advanced
 
-For the following commands, use `man` and Google to determine how they work and how they can support your work on the command line.
+For the following commands, use ```man``` and Google to determine how they work and how they can support your work on the command line.
 
-+ `|`
-+ `telnet`
-+ `curl`
-+ `grep`
-+ `echo`
-+ `la | grep .txt`
-+ `tar`
-+ `head`
-+ `tail`
-+ `nano`
++ ```|```
++ ```telnet```
++ ```curl```
++ ```grep```
++ ```echo```
++ ```la | grep .txt```
++ ```tar```
++ ```head```
++ ```tail```
++ ```nano```
