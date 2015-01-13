@@ -15,15 +15,15 @@ It makes somewhat more sense from blogger Adam Hawkins:
 Before we dive into the technical details, it would help to illuminate how the HTTP process and rack application work at a basic level. That will inform how we build our first rack app. Let's break down the basic process:
 
 1. The client sends HTTP **request**
-2. The server parses the HTTP request and passes it into our rack app.
-3. Our rack app logic determines the HTTP **response**.
-4. The server sends that HTTP response back to the client.
+2. The server parses the HTTP request and passes it into our rack app
+3. Our rack app logic determines the HTTP **response**
+4. The server sends that HTTP response back to the client
 
 At heart, the road map illustrates the purpose of rack. With our browser and server running, the browser sends a request by pointing to a URL. The server then provides us some magic to clean up the request and turn it into something we can use in our rack app. Rack is the first stop for that parsed HTTP request. Rack could then take the parsed request and hand it to Rails or Sinatra. For this assignment, our rack app will provide all of the logic and behavior, in and of itself.  
 
 ## Building a Rack Application
 
-### Send HTTP Request
+### The client sends HTTP request
 
 To begin this process, we have to choose the server we want to use. We are using WEBrick for this exercise because it’s a a simple HTTP web server library. You can read more about WEBrick in the Ruby docs.
 
@@ -49,7 +49,7 @@ When we run the app, we should see something like the following:
 
 Using our browser, go to the default WEBrick port, which is identified above: ```localhost:8080```. That sends an HTTP request to our server, which is the first important event in our road map.
 
-### HTTP Request Parsed and Passed into Rack App
+### The server parses the HTTP request and passes it into our rack app.
 
 
 Since our local app variable is set to ```nil```, we are expecting an error. It's going to be instructive. When we try to go to ```localhost:8080```, this error appears in the console.
@@ -146,7 +146,7 @@ The hash above is the environment, i.e., the parsed HTTP request that WEBrick is
 
 Let's keep building. After the custom #call method performed ```puts``` on the environment, it proceeded to try to work with the app. We see another error and it's instructive, which returns us to the path we're on.
 
-###Response to the Server
+### Our rack app logic determines the HTTP response
 
 Not only should we take in the environment, but we have to return something.
 
@@ -182,10 +182,10 @@ We will re-run the server and hope for the best when we go to ```localhost:8080`
 ```
 localhost - - [05/Dec/2014:13:48:50 EST] "GET / HTTP/1.1" 200 2
 - -> /
-````
+```
 Excellent. The last stop on our original road map was the browser.
 
-###Server Response to the Browser
+### The server sends that HTTP response back to the client
 
 The browser properly rendered the HTML:
 
