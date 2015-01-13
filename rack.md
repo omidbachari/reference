@@ -21,8 +21,6 @@ Before we dive into the technical details, it would help to illuminate how the H
 
 At heart, the road map illustrates the purpose of rack. With our browser and server running, the browser sends a request by pointing to a URL. The server then provides us some magic to clean up the request and turn it into something we can use in our rack app. Rack is the first stop for that parsed HTTP request. Rack could then take the parsed request and hand it to Rails or Sinatra. For this assignment, our rack app will provide all of the logic and behavior, in and of itself.  
 
-Since a rack app is just Ruby code, that means we have an opportunity to use this easy to learn and expressive language to determine our server's behavior.
-
 ## Building a Rack Application
 
 ### Send HTTP Request
