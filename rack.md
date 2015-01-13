@@ -49,7 +49,7 @@ When we run the app, we should see something like the following:
 
 Using our browser, go to the default WEBrick port, which is identified above: ```localhost:8080```. That sends an HTTP request to our server, which is the first important event in our road map.
 
-### The server parses the HTTP request and passes it into our rack app.
+### The server parses the HTTP request and passes it into our rack app
 
 
 Since our local app variable is set to ```nil```, we are expecting an error. It's going to be instructive. When we try to go to ```localhost:8080```, this error appears in the console.
