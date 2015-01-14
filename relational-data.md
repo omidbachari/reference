@@ -36,7 +36,7 @@ objectives (pg 35) and advantages (pg 39) of relational data modeling
 
 selected rules of the 12 rules of relational data management - (pg 36 - 39)
 
-## How does it work mathematically?
+## How does it work? Math!
 
 requires some basic knowledge of set notation
 
@@ -64,7 +64,7 @@ More joins
 + Right outer join (⟖)
 + Full outer join (⟗)
 
-## How does it work for the rest of us?
+## Painting the rest of the picture
 
 normalization
 
