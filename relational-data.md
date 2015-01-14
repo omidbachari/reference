@@ -1,6 +1,8 @@
 # Relational Data
 
-This article will help you understand relational data. From the mathematical underpinnings, to drafting an entity relationship (ER) diagram, to the inner-workings of your production database. The goal here is to provide you with a survey of important knolwedge that will illuminate the work you do every day with data.
+This article will help you understand relational data modeling. From the mathematical underpinnings, to drafting an entity relationship (ER) diagram, the goal here is to provide you with a survey of important knolwedge that will illuminate the work you do every day with data.
+
+In addition, being familiar with the terminology and background of relational data modeling can make you a stronger job candidate, as hiring managers appreciate someone who has taken the time to understand the "Why?" behind our every day technology.
 
 ## What is data?
 
