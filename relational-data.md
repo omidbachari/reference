@@ -12,39 +12,44 @@ data
 
 data element
 
-thinking behind data management - pg 4 of relational data modeling
+thinking behind data management - (pg 4 of relational data modeling)
 
 ## What is a data model?
 
 conceptual, logical, physical data models
 
-as is vs to be
+as-is vs to-be
 
 data element cycle
 
-why do it pg 13
+why create a model - (pg 13)
 
 ## Why relational data modeling?
 
 Heirarchy, network, relational
 
-properties of relational databases pg 30
+properties of relational databases - (pg 30)
 
 primary key, foreign key, migrating
 
-objectives pg 35 and advantages pg 39
+objectives (pg 35) and advantages (pg 39) of relational data modeling
 
-selected rules of the 12 rules 36 - 39
+selected rules of the 12 rules of relational data management - (pg 36 - 39)
 
 ## How does it work mathematically?
 
 requires some basic knowledge of set notation
 
-f E.F. Codd's relational model of data in 1970
+watershed article - E.F. Codd's relational model of data in 1970 while at IBM
 
-Five primitive operators of Codd's algebra are the selection, the projection, the Cartesian product (also called the cross product or cross join), the set union, and the set difference. (wikipedia)
+Five primitive operators of Codd's algebra are:
++ the selection
++ the projection
++ the Cartesian product (also called the cross product or cross join)
++ the set union
++ the set difference
 
-rename
+renames
 
 joins of all kinds
 
@@ -56,9 +61,9 @@ entities
 
 attributes
 
-normal forms 40-53
+normal forms - (pg 40-53)
 
-universal relations 41, 43
+universal relations - (pg 41, 43)
 
 ## In practice
 
