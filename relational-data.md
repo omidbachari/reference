@@ -1,4 +1,4 @@
-# Relational Data
+# Relational Data (Under cosntruction)
 
 This article will help you understand relational data modeling. From the mathematical underpinnings, to drafting an entity relationship (ER) diagram, the goal here is to provide you with a survey of important knolwedge that will illuminate the work you do every day with data.
 
@@ -6,13 +6,13 @@ In addition, being familiar with the terminology and background of relational da
 
 ## What is data?
 
-Data generally
+Data is readible information. It can come in the form of numbers, characters, images or other things recorded to a durable medium. Data by itself is likely to be meaningless. Take the **data element** "M". By itself, we can say a few things about "M". It's a string. It's one character. In our table of data, we might say that "M" stands in a place that cannot be left ```NULL```. Still, we haven't learned anything.
 
-data
+For data to be useful, we need to interpret it. Suppose "M" is the value a user inputted in a form, meaning male gender. Now, we can make decisions or create logic that deals with this. It has become information. The purpose for which we are writing software can be fulfilled, when data can be interpretted. We might want to match male users to clothing fit for males. We might want to use fitness metrics to determine ideal heart rate for male users.
 
-data element
+As professionals dealing with data, our data needs to be as simple and reusable as possible. That's how we isolate meaning and build relationships that support the creation of new information. If we can easily compare gender with average time spent on the site, for example, maybe we can learn new information about our target audience.
 
-thinking behind data management - (pg 4 of relational data modeling)
+We will learn more about data in this article, spelling out the thinking that underlies well organized data in greater detail. That way, we can unlock the potential benefits that data has to offer software developers.
 
 ## What is a data model?
 
