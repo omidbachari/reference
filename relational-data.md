@@ -49,9 +49,20 @@ Five primitive operators of Codd's algebra are:
 + the set union
 + the set difference
 
-renames
+Renames
 
-joins of all kinds
+Joins
++ Natural join (⋈)
++ θ-join and equijoin
++ Semijoin (⋉)(⋊)
++ Antijoin (▷)
++ Division (÷)
+
+More joins
++ Outer joins
++ Left outer join (⟕)
++ Right outer join (⟖)
++ Full outer join (⟗)
 
 ## How does it work for the rest of us?
 
