@@ -34,9 +34,19 @@ objectives pg 35 and advantages pg 39
 
 selected rules of the 12 rules 36 - 39
 
-## How does it work?
+## How does it work mathematecally?
 
-Selected math - unknown?
+requires some basic knowledge of set notation
+
+f E.F. Codd's relational model of data in 1970
+
+Five primitive operators of Codd's algebra are the selection, the projection, the Cartesian product (also called the cross product or cross join), the set union, and the set difference. (wikipedia)
+
+rename
+
+joins of all kinds
+
+## How does it work for the rest of us?
 
 normalization
 
@@ -44,17 +54,17 @@ entities
 
 attributes
 
-## In Practice
-
 normal forms 40-53
 
 universal relations 41, 43
 
-## Buzz words
+## In practice
+
+### Buzz words
 
 pg 57
 
-## Buzz graphics
+### Buzz graphics
 
 pg 89
 
