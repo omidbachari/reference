@@ -34,7 +34,7 @@ objectives pg 35 and advantages pg 39
 
 selected rules of the 12 rules 36 - 39
 
-## How does it work mathematecally?
+## How does it work mathematically?
 
 requires some basic knowledge of set notation
 
