@@ -30,7 +30,7 @@ In this case, let's look at one example that serves this conceptual model. A man
 
 A conceptual data model is used to inform a **logical** model. A logical data model includes details that a conceptual model leaves out. All of a logical entity's attributes need to be fully spelled out. That means we need to completely understand the business details. Make note that with conceptual and logical models, we are learning more about the business to understand the needs of the data model. Logical models come closer to implementation, but they are still used in this learning phase.
 
-Suppose we have a very clear idea of what is important to our console sales business. 
+Suppose we have a very clear idea of what information is important to our console sales business. That's the kind of confidence we need to create a logical model--we need to have all of the business details established.
 
 [Example]
 

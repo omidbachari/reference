@@ -23,8 +23,6 @@ At heart, the road map illustrates the purpose of rack. With our browser and ser
 
 ## Building a Rack Application
 
-### The client sends HTTP request
-
 To begin this process, we have to choose the server we want to use. We are using WEBrick for this exercise because it’s a a simple HTTP web server library. You can read more about WEBrick in the Ruby docs.
 
 Create a new ruby program called **app.rb**. The command to run a server, among other things, is part of the rack library. Require it.
@@ -46,6 +44,8 @@ When we run the app, we should see something like the following:
 [2014-12-05 10:34:58] INFO  ruby 2.0.0 (2014-02-24) [x86_64-darwin13.1.0]  
 [2014-12-05 10:34:58] INFO  WEBrick::HTTPServer#start: pid=29912 port=8080
 ```
+
+### The client sends HTTP request
 
 Using our browser, go to the default WEBrick port, which is identified above: ```localhost:8080```. That sends an HTTP request to our server, which is the first important event in our road map.
 
@@ -238,23 +238,7 @@ app = Proc.new do |env|
 end
 
 Rack::Handler::WEBrick.run app
-```
-In addition, the Rack Class provides us with some special objects to make rack app development convenient.
-
-```
-require 'rack'
-
-app = Proc.new do |env|
-  request = Rack::Request.new(env)
-  # Call on request.methods to see what is available.
-  [200, {"Content-Type" => "text/html"}, ["Hello, world!"]]
-end
-
-Rack::Handler::WEBrick.run app
-```
-Using a language shell for Ruby like Pry or IRB. Call #methods on ```request```. See what is available to you.
-
-Hint: You can build parts of the response triplet by calling methods on this object: ```Rack::Response.new(env)```. For example, try this assignment ```response.body = ["Hello, World"]```.  
+```  
 
 Good luck.
 
@@ -262,7 +246,7 @@ Good luck.
 
 Now that we know how to create different behavior depending on the path found in the environment, the next step is to use some of the information from the path to inform the string that we send to the server from our rack app. We need to take information dynamically from the URL, as a **parameter**, and move it through our rack app. Our goal is to display it on our page for our predetermined "/beers" routes.
 
-Specifically, we want to point our browser to "/beers/pilsner" or "/beers/IPA" or "/beers/stout" and be able to see "PILSNER" or "IPA" or "STOUT" as our headlines, respectively. Every other path should return ```<h1>404: Page does not exist.</h1>```.  This requires us to dynamically take part of the string that comes after "/beers" and call it in our HTML body.  
+Specifically, we want to point our browser to "/beers/pilsner" or "/beers/IPA" or "/beers/stout" and be able to see "PILSNER" or "IPA" or "STOUT" as our headlines, respectively. Every other path, like "beers/Coors" should return a dynamic error```<h1>404: Page about Coors does not exist.</h1>```.  This requires us to dynamically take part of the string that comes after "/beers" and call it in our HTML body.  
 
 Good luck.
 
