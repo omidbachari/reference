@@ -23,38 +23,42 @@ At heart, the road map illustrates the purpose of rack. With our browser and ser
 
 ## Building a Rack Application
 
-### The client sends HTTP request
-
 To begin this process, we have to choose the server we want to use. We are using WEBrick for this exercise because it’s a a simple HTTP web server library. You can read more about WEBrick in the Ruby docs.
 
 Create a new ruby program called **app.rb**. The command to run a server, among other things, is part of the rack library. Require it.
 
-```
+```ruby
 require "rack"
 ```
-Now, create the server and pass it the name of our app, which is currently assigned to ```nil```.
-```
+
+Now, create the server and pass it the name of our app, which is currently assigned to `nil`.  
+
+```ruby
 app = nil
 
 Rack::Handler::WEBrick.run app
 ```
+
+
 When we run the app, we should see something like the following:
 
-```
+```no-highlight
 ➜  rack-work  ruby app.rb  
 [2014-12-05 10:34:58] INFO  WEBrick 1.3.1  
 [2014-12-05 10:34:58] INFO  ruby 2.0.0 (2014-02-24) [x86_64-darwin13.1.0]  
 [2014-12-05 10:34:58] INFO  WEBrick::HTTPServer#start: pid=29912 port=8080
 ```
 
-Using our browser, go to the default WEBrick port, which is identified above: ```localhost:8080```. That sends an HTTP request to our server, which is the first important event in our road map.
+### The client sends HTTP request
+
+Using our browser, go to the default WEBrick port, which is identified above: `localhost:8080`. That sends an HTTP request to our server, which is the first important event in our road map.
 
 ### The server parses the HTTP request and passes it into our rack app
 
 
-Since our local app variable is set to ```nil```, we are expecting an error. It's going to be instructive. When we try to go to ```localhost:8080```, this error appears in the console.
+Since our local app variable is set to `nil`, we are expecting an error. It's going to be instructive. When we try to go to `localhost:8080`, this error appears in the console.
 
-```
+```no-highlight
 [2014-12-05 10:35:05] ERROR NoMethodError: undefined method `call' for nil:NilClass
 ...
 localhost - - [05/Dec/2014:10:35:05 EST] "GET / HTTP/1.1" 500 320
@@ -65,7 +69,7 @@ The request made it to the server! But it appears we got a code 500, because WEB
 
 Let's try to fix that in a hacky way. We're just going to follow the error and see where it takes us. At the end of this lesson, we'll stop being hacky. Here is what's in **app.rb** now.
 
-```
+```ruby
 require 'rack'
 
 class App
@@ -76,11 +80,11 @@ end
 app = App.new
 
 Rack::Handler::WEBrick.run app
-
 ```
+
 Let's try the same actions and see if the error has changed in a helpful way. If we restart the server and try to go to the port, we now get this response.
 
-```
+```no-highlight
 [2014-12-05 11:30:16] ERROR ArgumentError: wrong number of arguments (1 for 0)
 app.rb:6:in `call'
 ...
@@ -92,9 +96,9 @@ Interesting. The server expected #call and that's what we gave it. Now, the targ
 What is happening is that our server is trying to call #call on our app, and it's also trying to pass the parsed HTTP request into the #call method, as an argument. This is the next important event in our road map.
 Having the parsed HTTP request available in our app will later allow us to program all kinds of exciting behavior in response to the HTTP request. So, in what way is the HTTP request prepared for our use? The parsed HTTP request is a hash called the **environment**. A hash is a Ruby data type that we should know how to navigate. See more about the Hash Class in the Ruby docs.
 
-Now, let's provide for #call in our code, that takes an argument, and see what happens next. Since we know the server is going to pass the environment into #call, we should ```puts``` it. It would help to also call the #inspect method on the environment to see what the data structure looks like. Here is **app.rb**:
+Now, let's provide for #call in our code, that takes an argument, and see what happens next. Since we know the server is going to pass the environment into #call, we should `puts` it. It would help to also call the #inspect method on the environment to see what the data structure looks like. Here is **app.rb**:
 
-```
+```ruby
 require 'rack'
 
 class App
@@ -107,10 +111,10 @@ app = App.new
 
 Rack::Handler::WEBrick.run app
 ```
-When restarting the server and going to ```localhost:8080```, we got a couple of golden nuggets. First, the console contains the output of the ```puts``` command:
+When restarting the server and going to `localhost:8080`, we got a couple of golden nuggets. First, the console contains the output of the `puts` command:
 
 
-```
+```no-highlight
 {
   "GATEWAY_INTERFACE"=>"CGI/1.1",
   "PATH_INFO"=>"/",
@@ -142,15 +146,16 @@ When restarting the server and going to ```localhost:8080```, we got a couple of
   "REQUEST_PATH"=>"/"
 }
 ```
-The hash above is the environment, i.e., the parsed HTTP request that WEBrick is passing into the rack app. It has valuable information that we might be able to use. For example, ```"PATH_INFO"=>"/"``` and ```"REQUEST_METHOD"=>"GET"```. This data is going to be the basis of our rack app's behavior.
 
-Let's keep building. After the custom #call method performed ```puts``` on the environment, it proceeded to try to work with the app. We see another error and it's instructive, which returns us to the path we're on.
+The hash above is the environment, i.e., the parsed HTTP request that WEBrick is passing into the rack app. It has valuable information that we might be able to use. For example, `"PATH_INFO"=>"/"` and `"REQUEST_METHOD"=>"GET"`. This data is going to be the basis of our rack app's behavior.
+
+Let's keep building. After the custom #call method performed `puts` on the environment, it proceeded to try to work with the app. We see another error and it's instructive, which returns us to the path we're on.
 
 ### Our rack app logic determines the HTTP response
 
 Not only should we take in the environment, but we have to return something.
 
-```
+```no-highlight
 [2014-12-05 11:56:13] ERROR NoMethodError: undefined method `each' for nil:NilClass
 ...
 localhost - - [05/Dec/2014:11:56:13 EST] "GET / HTTP/1.1" 500 320
@@ -160,7 +165,7 @@ While this error is not completely informative, we know what it's trying to do. 
 
 Let's cure that error. We're still being hacky, but we can have #call return the data that the server expects (a properly structured HTTP response; aka, a **triplet**), by doing the following:
 
-```
+```ruby
 require 'rack'
 
 class App
@@ -175,34 +180,65 @@ Rack::Handler::WEBrick.run app
 
 ```
 
-Our last error complained that there was no array to call #each on. Now, ```["Hello, world!"]``` stands in the place that the #each method was previously called by the server. Let's see if this advances us to the next step. Notice: we take in the environment with the implementation above, but we aren't doing anything with it.
+Our last error complained that there was no array to call #each on. Now, `["Hello, world!"]` stands in the place that the #each method was previously called by the server. Let's see if this advances us to the next step. Notice: we take in the environment with the implementation above, but we aren't doing anything with it.
 
-We will re-run the server and hope for the best when we go to ```localhost:8080```. What we want is the response code 200 that we put in our array and we also want the page to be properly rendered in our browser. Our server says:
+We will re-run the server and hope for the best when we go to `localhost:8080`. What we want is the response code 200 that we put in our array and we also want the page to be properly rendered in our browser. Our server says:
 
-```
+```no-highlight
 localhost - - [05/Dec/2014:13:48:50 EST] "GET / HTTP/1.1" 200 2
 - -> /
 ```
+
 Excellent. The last stop on our original road map was the browser.
 
 ### The server sends that HTTP response back to the client
 
 The browser properly rendered the HTML:
 
-```
+```no-highlight
 Hello, world!
 ```
+
 So, we have no errors to speak of, and the HTTP request and response worked. Success! We created the hacky version of our app.
 
 ## The Non-Hacky Version
 
 Now, what would the app look like if it weren't as hacky? We have peeked at the errors and the data being moved around, for our learning benefit. But we should no longer use our custom App Class.
 
-The Ruby Standard Library includes a Proc Class. A proc object already has the #call method, and it takes an argument in the way that the server wants to pass it in through #call. And a proc object returns a block of code that we define. Perfect.
+Think about the behavior that our custom class had to accommodate, as we were going through the errors. We had to provide for #call, passing in the `env` and running a block of code. Wouldn't it be nice is something in Ruby already did all that?
+
+You're in for a treat. The Ruby Standard Library includes a Proc Class. A proc object already has the #call method, and it takes an argument in the way that the server wants to pass it in through #call. And a proc object returns a block of code that we define. Perfect.
+
+### More on Procs
+
+Let's talk about Procs, because they may look and sound frightening at first. But we're going to use a Proc in a simple way. So, don't worry about the possible complexity. Have a look at this code:
+
+```ruby
+english_greeter = Proc.new do |name|
+  puts "Hello #{name}"
+end
+```
+
+Here, we're creating a proc and assigning it to `english_greeter`. Why are we setting up the local variable `name`? You have seen pipes with a local variable before. When we are dealing with Array Class objects, using #each, the local variable is a placeholder for elements in an array. But, what exactly is holding the place of `name`? Something must be passed into our object. Procs respond to #call, which takes any number of arguments like so:
+
+```ruby
+english_greeter.call('Omid')
+```
+
+That returns:
+
+```no-highlight
+Hello Omid
+```
+
+We can deduce that setting up the local variable allows us to pass in an argument to #call and dynamically affect the block of code inside the proc, which in this example is just `puts "Hello #{name}"`.
+
+That's not so complex. Here's the beauty in the interaction of Rack and Procs. In the HTTP process, the last step of our process involves a string. A big string. The server sends an HTTP response back to the client in the form of a big string of HTML. And in the Proc example above, our local variable `name` provided clarity on where the string `'Omid'` would be handled in our block of code. The following, Non-Hacky implementation should be easier to understand.
+
 
 Let's change **app.rb** to reflect this approach.
 
-```
+```ruby
 require 'rack'
 
 app = Proc.new do |env|
@@ -216,19 +252,19 @@ This will have the same apparent behavior as our previous configuration, with a 
 
 # BEERS: Implementing Routes - Challenge 1
 
-Right now, our server responds with ```Hello, world!``` in the browser. To anything. That means ```localhost:8080```, ```localhost:8080/foo``` and ```localhost:8080/bar``` all give us ```Hello, world!```. The server is sending us the same content, every time.
+Right now, our server responds with `Hello, world!` in the browser. To anything. That means `localhost:8080`, `localhost:8080/foo` and `localhost:8080/bar` all give us `Hello, world!`. The server is sending us the same content, every time.
 
-Since our environment contains the value of ```PATH_INFO```, we know we have access to the path. Our rack app should provide different behavior, depending on the value of ```PATH_INFO```. Let's build a rack app that gives us different **routes**, which are paths that the interpreter can choose from in responding to the server. We should respond with different HTML strings according to the route accessed.
+Since our environment contains the value of `PATH_INFO`, we know we have access to the path. Our rack app should provide different behavior, depending on the value of `PATH_INFO`. Let's build a rack app that gives us different **routes**, which are paths that the interpreter can choose from in responding to the server. We should respond with different HTML strings according to the route accessed.
 
-Specifically, we want "/beers" to return this string of HTML: ```<h1>BEERS</h1>```. Every other path should return ```<h1>404: Page does not exist.</h1>```.
+Specifically, we want "/beers" to return this string of HTML: `<h1>BEERS</h1>`. Every other path should return `<h1>404: Page does not exist.</h1>`.
 
-###First Steps
+### First Steps
 
 Creating a rack app in the non-hacky way required us to use a proc object. That is because a proc object returns a block of code, and the Proc Class provides us with the method #call, into which we can pass the environment.
 
-In our block, we have access to ```env```.
+In our block, we have access to `env`.
 
-```
+```ruby
 require 'rack'
 
 app = Proc.new do |env|
@@ -239,22 +275,6 @@ end
 
 Rack::Handler::WEBrick.run app
 ```
-In addition, the Rack Class provides us with some special objects to make rack app development convenient.
-
-```
-require 'rack'
-
-app = Proc.new do |env|
-  request = Rack::Request.new(env)
-  # Call on request.methods to see what is available.
-  [200, {"Content-Type" => "text/html"}, ["Hello, world!"]]
-end
-
-Rack::Handler::WEBrick.run app
-```
-Using a language shell for Ruby like Pry or IRB. Call #methods on ```request```. See what is available to you.
-
-Hint: You can build parts of the response triplet by calling methods on this object: ```Rack::Response.new(env)```. For example, try this assignment ```response.body = ["Hello, World"]```.  
 
 Good luck.
 
@@ -262,7 +282,7 @@ Good luck.
 
 Now that we know how to create different behavior depending on the path found in the environment, the next step is to use some of the information from the path to inform the string that we send to the server from our rack app. We need to take information dynamically from the URL, as a **parameter**, and move it through our rack app. Our goal is to display it on our page for our predetermined "/beers" routes.
 
-Specifically, we want to point our browser to "/beers/pilsner" or "/beers/IPA" or "/beers/stout" and be able to see "PILSNER" or "IPA" or "STOUT" as our headlines, respectively. Every other path should return ```<h1>404: Page does not exist.</h1>```.  This requires us to dynamically take part of the string that comes after "/beers" and call it in our HTML body.  
+Specifically, we want to point our browser to "/beers/pilsner" or "/beers/IPA" or "/beers/stout" and be able to see "PILSNER" or "IPA" or "STOUT" as our headlines, respectively. Every other path, like "beers/Coors" should return a dynamic error `<h1>404: Page about Coors does not exist.</h1>`.  This requires us to dynamically take part of the string that comes after "/beers" and call it in our HTML body.  
 
 Good luck.
 
@@ -274,14 +294,15 @@ The user will decide what she wants to throw by going to one of the three paths:
 
 The output in the browser should look like this in raw HTML:
 
-```
+```ruby
 <h1>Rock, Paper, Scissors</h1>
   <ul>
     <li>The player throws: Paper</li>
     <li>The computer throws: Rock</li>
     <li>The player wins!</li>
   </ul>
-```
+```  
+
 This exercise will expand the amount of logic that we're using in our rack application.  
 
 Good luck.
