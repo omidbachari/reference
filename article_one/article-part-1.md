@@ -1,6 +1,6 @@
 # Ready. Set. Go!
 
-*A short essay on what you're going to get out of this.**
+*A short essay on what you're going to get out of this.*
 
 By Omid Bachari
 
