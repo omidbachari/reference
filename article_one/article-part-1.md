@@ -44,7 +44,7 @@ Here is the lesson. **Something new is always awaiting your discovery.** A new p
 
 If you do this long enough, some of those thoughts will become second nature. However, what distinguishes a great programmer is this intellectual bravery. It's an attitude of "I can handle anything." The fact is, we can't handle any problem. And we need to be honest when we're stuck. But the positive attitude and the willingness to try are what will make you. Paralysis and fear will break you.
 
-Does that sound like a lesson you can learn while playing Sudoku? Didn't think so. Is that going to make you a kick ass person? Absolutely. Is it also going to make you a better programming? You better fucking believe it.
+Does that sound like a lesson you can learn while playing Sudoku? Didn't think so. Is that going to make you a kick ass person? Absolutely. Is it also going to make you a better programmer? You better fucking believe it.
 
 ## Good luck!
 
