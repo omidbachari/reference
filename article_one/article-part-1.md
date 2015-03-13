@@ -28,7 +28,7 @@ Everything requires some training and can intimidate the uninitiated. Take your 
 
 Programming is a field where the learning is constant. That's what makes it fulfilling. But that means you're going to see something new and strange almost every day. So, it's time for our first stop for becoming an engineer.
 
-## Lesson 1: See something new? FREAK THE FUCK OUT!
+## Lesson 1: See something new? FREAK OUT!
 
 Just kidding. Part of being a great programmer is being aware of the discomfort that attends strange and unknown intellectual territory, without letting it cause paralysis.
 
@@ -44,7 +44,7 @@ Here is the lesson. **Something new is always awaiting your discovery.** A new p
 
 If you do this long enough, some of those thoughts will become second nature. However, what distinguishes a great programmer is this intellectual bravery. It's an attitude of "I can handle anything." The fact is, we can't handle any problem. And we need to be honest when we're stuck. But the positive attitude and the willingness to try are what will make you. Paralysis and fear will break you.
 
-Does that sound like a lesson you can learn while playing Sudoku? Didn't think so. Is that going to make you a kick ass person? Absolutely. Is it also going to make you a better programmer? You better fucking believe it.
+Does that sound like a lesson you can learn while playing Sudoku? Didn't think so. Is that going to make you a kick ass person? Absolutely. Is it also going to make you a better programmer? You better believe it.
 
 ## Good luck!
 
