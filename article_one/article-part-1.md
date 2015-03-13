@@ -28,7 +28,7 @@ Everything requires some training and can intimidate the uninitiated. Take your 
 
 Programming is a field where the learning is constant. That's what makes it fulfilling. But that means you're going to see something new and strange almost every day. So, it's time for our first stop for becoming an engineer.
 
-## Lesson 1: See something new? FREAK THE FUCK OUT!
+## Lesson 1: See something new? FREAK OUT!
 
 Just kidding. Part of being a great programmer is being aware of the discomfort that attends strange and unknown intellectual territory, without letting it cause paralysis.
 
