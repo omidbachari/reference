@@ -1,6 +1,18 @@
 
 # Data and Relational Data: Advanced Topics and Practical Applications
 
+### Note: Guiding Example
+
+For the purpose of this article, we will be dealing with a certain type of data with established relevance: game consoles and games! If you suppose we are building the back end for a game console sales business, we need to think about what data model captures the information that the business will need.
+
+![conceptual-model]()
+
+Conceptual data models are made up of conceptual entities--the models are never going to be physically deployed as illustrated. They don't have attributes. Rather, they are mainly used as a tool for developers to better understand the needs of a business or the purpose software needs to fulfill.
+
+In this case, let's look at one example that serves this conceptual model. A console manufacturer like [Sony](http://en.wikipedia.org/wiki/Sony) can produce a platform called [PlayStation 1](http://en.wikipedia.org/wiki/PlayStation_%28console%29), and it has (among others) the legendary [DualShock 1](http://en.wikipedia.org/wiki/DualShock) controller. And the PlayStation 1 comes in the re-designed [PSone](http://en.wikipedia.org/wiki/PlayStation_models#PSone) exterior, as well as the original, boxy exterior. Furthermore, some games publishers like [Electronic Arts](http://en.wikipedia.org/wiki/Electronic_Arts) make games like [NBA Live 96](http://en.wikipedia.org/wiki/NBA_Live_96), which works for multiple platforms: Playstation and [Sega Genesis](http://en.wikipedia.org/wiki/Sega_Genesis). Other games, like [Metal Gear Solid](http://en.wikipedia.org/wiki/Metal_Gear_Solid), are only available on one platform (Playstation), which is why some consoles are better than others. Frankly.  
+<br>
+
+
 Terminology examined
 Category versus Instance
 Association versus Intersection

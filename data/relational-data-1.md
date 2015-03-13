@@ -73,4 +73,4 @@ each column has a uniquue name within the table that owns it
 by connecting records through matching data contained in database fields allows for child records to have multiple parents.
 
 relational design emphasizes storing information in only one place
-the beauty is that you can avoid the strange pairing that was involved in network databases. instead, you match a column from a parent table (the primary key) with a column from a child table that references the parent table's records (the foreign key on this table) 
+the beauty is that you can avoid the strange pairing that was involved in network databases. instead, you match a column from a parent table (the primary key) with a column from a child table that references the parent table's records (the foreign key on this table)
