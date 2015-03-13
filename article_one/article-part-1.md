@@ -12,7 +12,7 @@ First, you are here. We know that. And you're here to discover more about a disc
 
 ### Time well spent
 
-**Instead, programming is a way to sharpen your brain that is professionally and technically significant.** And that's pretty awesome. Because we can't just engineer the plans for a bridge, an deep water oil well, a circuit board, or a bionic arm, just because we feel like it. But we CAN engineer software whenever and wherever we want. And you can, too! How many professional pursuits allow you to do that? That makes programming a killer hobby. It's time well spent.
+**Instead, programming is a way to sharpen your brain that is professionally and technically significant.** And that's pretty awesome. Because we can't just engineer the plans for a bridge, a deep water oil well, a circuit board, or a bionic arm, just because we feel like it. But we CAN engineer software whenever and wherever we want. And you can, too! How many professional pursuits allow you to do that? That makes programming a killer hobby. It's time well spent.
 
 ### Tricks are for the circus, not your career
 
