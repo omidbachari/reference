@@ -233,12 +233,3 @@ Using the lesson learned above, implement the code needed for this to work:
 > puts fruit1 + fruit2
 apple and orange
 ```
-
-
-```ruby
-input
-name
-address
-country
-data
-```
